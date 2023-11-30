@@ -17,7 +17,6 @@ export class App extends Component {
         [option.toLowerCase()]: prevState[option.toLowerCase()] + 1,
       };
     });
-    console.log(this.state);
   };
 
   countTotalFeedback = () => {
