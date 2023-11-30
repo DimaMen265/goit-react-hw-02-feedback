@@ -1,5 +1,7 @@
+import styles from "./Notification.module.css";
+
 export const Notification = props => (
   <>
-    <p>{props.message}</p>
+    <p className={styles.text}>{props.message}</p>
   </>
 );
