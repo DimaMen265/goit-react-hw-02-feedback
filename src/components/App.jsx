@@ -11,16 +11,13 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleClickGood = () => {
-    this.setState(prev => ({ good: prev.good + 1 }));
-  };
-
-  handleClickNeutral = () => {
-    this.setState(prev => ({ neutral: prev.neutral + 1 }));
-  };
-
-  handleClickBad = () => {
-    this.setState(prev => ({ bad: prev.bad + 1 }));
+  handleClickFeedback = (option) => {
+    this.setState(prevState => {
+      return {
+        [option.toLowerCase()]: prevState[option.toLowerCase()] + 1,
+      };
+    });
+    console.log(this.state);
   };
 
   countTotalFeedback = () => {
@@ -40,7 +37,7 @@ export class App extends Component {
           children={
             <FeedbackOptions
               options={["Good", "Neutral", "Bad"]}
-              onLeaveFeedback={[this.handleClickGood, this.handleClickNeutral, this.handleClickBad]}
+              onLeaveFeedback={this.handleClickFeedback}
             />
           }
         />
