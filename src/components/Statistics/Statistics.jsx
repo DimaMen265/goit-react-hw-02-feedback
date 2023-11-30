@@ -4,19 +4,19 @@ export const Statistics = ({ good, neutral, bad, total, positivePercentage }) =>
     return (
         <ul className={styles.listStatistics}>
             <li>
-                <p>Good: {good}</p>
+                <p className={styles.text}>Good: {good}</p>
             </li>
             <li>
-                <p>Neutral: {neutral}</p>
+                <p className={styles.text}>Neutral: {neutral}</p>
             </li>
             <li>
-                <p>Bad: {bad}</p>
+                <p className={styles.text}>Bad: {bad}</p>
             </li>
             <li>
-                <p>Total: {total}</p>
+                <p className={styles.text}>Total: {total}</p>
             </li>
             <li>
-                <p>Positive feedback: {positivePercentage}%</p>
+                <p className={styles.text}>Positive feedback: {positivePercentage}%</p>
             </li>
         </ul>
     );
